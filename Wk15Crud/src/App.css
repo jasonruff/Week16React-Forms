@@ -1,0 +1,185 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Layout */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  /* Container Layout */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Product List - Horizontal Layout on Larger Screens */
+  .product-list {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+  }
+  
+  /* Product Card */
+  .product-card {
+    width: 100%;           /* Full width of container */
+    max-width: 200px;      /* Limit each product card's width */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+  
+  /* Product Images */
+  .product-card img {
+    width: 100%;            /* Ensure images are responsive */
+    max-width: 200px;       /* Limit to 200px */
+    max-height: 200px;      /* Limit height to 200px */
+    height: auto;           /* Maintain aspect ratio */
+    object-fit: contain;    /* Avoid image distortion */
+  }
+  
+  /* Cart Sidebar */
+  .cart-sidebar {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    position: sticky;
+    top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    background-color: #343a40;
+  }
+  
+  .navbar .navbar-brand {
+    color: white;
+    font-size: 1.5rem;
+  }
+  
+  .navbar .nav-link {
+    color: white;
+    font-size: 1.1rem;
+    margin-left: 20px;
+  }
+  
+  .navbar .nav-link:hover {
+    color: #e74c3c;
+  }
+  
+  /* Mobile-first styling */
+  @media (max-width: 768px) {
+    /* Stack products vertically on small screens */
+    .product-list {
+      flex-direction: column; /* Stack vertically */
+    }
+  
+    /* Cart Sidebar */
+    .cart-sidebar {
+      width: 100%;
+      max-width: none;
+    }
+  }
+  
+  
+    /* Adding a New Product */
+  
+  .add-product-container {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .add-product-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .add-product-button:hover {
+    background-color: #45a049;
+  }
+  
+    /* Deleting a  Product */
+  
+  .product-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .add-to-cart-button, .delete-product-button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .add-to-cart-button {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .add-to-cart-button:hover {
+    background-color: #45a049;
+  }
+  
+  .delete-product-button {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .delete-product-button:hover {
+    background-color: #d32f2f;
+  }
+  
+    /* Favorite Product Button  */
+  
+  .product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .favorite-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.3s;
+  }
+  
+  .favorite-button.favorited {
+    color: gold;
+  }
+  
+  .favorite-button:hover {
+    transform: scale(1.1);
+  }
