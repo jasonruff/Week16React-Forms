@@ -4,7 +4,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 
 const NavigationBar: React.FC = () => {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar expand="lg" style={{ backgroundColor: '#002244' }}>
       <Navbar.Brand href="#">E-commerce</Navbar.Brand>
       <Nav className="ml-auto">
         <Nav.Link href="#home">Home</Nav.Link>

@@ -29,7 +29,7 @@ body {
 
 /* Page header styling */
 .navbar {
-  background-color: #343a40;
+  background-color: #002244;  /* Seahawks navy blue */
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   margin-bottom: 20px;
   padding: 12px 0;
@@ -50,7 +50,7 @@ body {
 }
 
 .navbar .nav-link:hover {
-  color: #fff;
+  color: #69BE28;  /* Seahawks action green */
 }
 
 /* Product List Container */
