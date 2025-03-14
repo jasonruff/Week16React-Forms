@@ -8,7 +8,8 @@ type ProductListProps = {
   addToCart: (product: Product) => void;
   addNewProduct: () => void;
   deleteProduct: (id: number) => void;
-  toggleFavorite: (id: number) => void; // Add the toggle function
+  toggleFavorite: (id: number) => void;
+  onEditProduct: (product: Product) => void;
 };
 
 const ProductList: React.FC<ProductListProps> = ({ 
@@ -17,29 +18,34 @@ const ProductList: React.FC<ProductListProps> = ({
   addToCart,
   addNewProduct,
   deleteProduct,
-  toggleFavorite // Destructure the new prop
+  toggleFavorite,
+  onEditProduct
 }) => {
   return (
     <div className="product-list">
       <div className="add-product-container">
+        <h2>Products ({products.length})</h2>
         <button 
           className="add-product-button" 
           onClick={addNewProduct}
         >
-          Add New Product
+          + Add New Product
         </button>
       </div>
       
-      {products.map((product) => (
-        <ProductCard 
-          key={product.id} 
-          product={product} 
-          setProducts={setProducts}
-          addToCart={addToCart}
-          deleteProduct={deleteProduct}
-          toggleFavorite={toggleFavorite} // Pass the toggle function to each card
-        />
-      ))}
+      <div className="products-grid">
+        {products.map((product) => (
+          <ProductCard 
+            key={product.id} 
+            product={product} 
+            setProducts={setProducts}
+            addToCart={addToCart}
+            deleteProduct={deleteProduct}
+            toggleFavorite={toggleFavorite}
+            onEditProduct={onEditProduct}
+          />
+        ))}
+      </div>
     </div>
   );
 };
